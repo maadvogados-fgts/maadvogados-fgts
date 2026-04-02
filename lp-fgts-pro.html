@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FGTS Atrasado? Você Pode Sair e Receber Tudo — Dr. Marlon Aguiar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --verde:#1B6B3A;
+  --verde2:#145c30;
+  --verde-claro:#EBF5F0;
+  --dourado:#C8922A;
+  --dourado2:#f0b445;
+  --preto:#0A0A0A;
+  --cinza:#F7F7F5;
+  --cinza2:#EFEFED;
+  --texto:#1A1A1A;
+  --texto2:#555;
+  --branco:#fff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--texto);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── BARRA TOPO ── */
+.barra-topo{background:var(--preto);color:rgba(255,255,255,.7);font-size:.75rem;text-align:center;padding:.5rem 1rem;letter-spacing:.04em}
+.barra-topo span{color:var(--dourado2);font-weight:600}
+
+/* ── NAV ── */
+nav{background:var(--preto);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-logo{display:flex;flex-direction:column}
+.nav-nome{font-family:'Playfair Display',serif;font-size:1.15rem;color:#fff;font-weight:700;letter-spacing:-.01em}
+.nav-oab{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:1px}
+.nav-cta{background:var(--verde);color:#fff;font-size:.8rem;font-weight:600;padding:.55rem 1.1rem;border-radius:8px;text-decoration:none;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:var(--verde2)}
+
+/* ── HERO ── */
+.hero{background:var(--preto);min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:4rem 1.5rem 5rem}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(27,107,58,.22) 0%,transparent 65%);top:-200px;right:-200px;pointer-events:none}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(200,146,42,.1) 0%,transparent 70%);bottom:-100px;left:-50px;pointer-events:none}
+.hero-inner{max-width:640px;margin:0 auto;width:100%;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:rgba(200,146,42,.12);border:1px solid rgba(200,146,42,.3);color:var(--dourado2);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.75rem}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--dourado2);border-radius:50%;flex-shrink:0;animation:blink 1.8s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6.5vw,3.8rem);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-.03em;margin-bottom:1.25rem}
+.hero h1 em{color:var(--dourado2);font-style:italic}
+.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:2rem;max-width:530px}
+.hero-desc strong{color:rgba(255,255,255,.9)}
+.hero-filtro{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:.9rem 1.1rem;font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:2rem}
+.hero-filtro strong{color:rgba(255,255,255,.85)}
+.btn-verde{display:flex;align-items:center;justify-content:center;gap:.65rem;background:var(--verde);color:#fff;font-size:1rem;font-weight:600;padding:1.1rem 1.75rem;border-radius:12px;text-decoration:none;transition:all .2s;letter-spacing:-.01em;width:100%;max-width:440px}
+.btn-verde:hover{background:var(--verde2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(27,107,58,.35)}
+.btn-verde svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+.hero-sub-cta{font-size:.75rem;color:rgba(255,255,255,.35);margin-top:.75rem;max-width:440px;line-height:1.6}
+
+/* ── NÚMEROS ── */
+.numeros{background:var(--verde);padding:2rem 1.5rem}
+.numeros-grid{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.15);border-radius:12px;overflow:hidden}
+.num-item{background:var(--verde);padding:1.25rem;text-align:center}
+.num-val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;line-height:1}
+.num-label{font-size:.75rem;color:rgba(255,255,255,.65);margin-top:.35rem;line-height:1.4}
+
+/* ── SEÇÃO BASE ── */
+.secao{padding:4rem 1.5rem}
+.secao-inner{max-width:640px;margin:0 auto}
+.s-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--verde);margin-bottom:.65rem}
+.s-titulo{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:700;color:var(--preto);line-height:1.15;letter-spacing:-.025em;margin-bottom:.75rem}
+.s-subtitulo{font-size:1rem;color:var(--texto2);line-height:1.75;margin-bottom:2rem}
+
+/* ── SITUAÇÕES ── */
+.situacoes{display:flex;flex-direction:column;gap:.65rem;margin-bottom:2.5rem}
+.sit-item{display:flex;align-items:flex-start;gap:.9rem;padding:1rem 1.15rem;background:var(--cinza);border-radius:10px;border-left:3px solid var(--verde)}
+.sit-icone{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+.sit-texto{font-size:.92rem;color:var(--texto);line-height:1.55}
+.sit-texto strong{color:var(--preto)}
+
+/* ── DIREITOS ── */
+.secao-escura{background:var(--preto);color:#fff;padding:4rem 1.5rem}
+.secao-escura .s-label{color:var(--dourado2)}
+.secao-escura .s-titulo{color:#fff}
+.secao-escura .s-subtitulo{color:rgba(255,255,255,.6)}
+.direitos-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:2rem}
+.dir-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:1rem}
+.dir-val{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--dourado2);line-height:1;margin-bottom:.3rem}
+.dir-nome{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.4}
+.urgencia{background:rgba(200,146,42,.1);border:1px solid rgba(200,146,42,.25);border-radius:12px;padding:1.1rem 1.15rem;display:flex;gap:.9rem;align-items:flex-start;margin-bottom:2rem}
+.urg-icone{font-size:1.3rem;flex-shrink:0}
+.urg-texto{font-size:.87rem;color:rgba(255,255,255,.75);line-height:1.65}
+.urg-texto strong{color:var(--dourado2)}
+.nao-qualifica{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.25rem;margin-top:2rem}
+.nao-q-titulo{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.85rem}
+.nao-q-lista{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.nao-q-lista li{font-size:.83rem;color:rgba(255,255,255,.5);line-height:1.5;padding-left:1.1rem;position:relative}
+.nao-q-lista li::before{content:'×';position:absolute;left:0;color:rgba(255,80,80,.6)}
+
+/* ── PROVA SOCIAL ── */
+.estrelas{color:#f4a707;font-size:1.1rem;letter-spacing:2px;margin-bottom:.4rem}
+.av-resumo{font-size:.83rem;color:var(--texto2);margin-bottom:2rem}
+.depoimentos{display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem}
+.dep{background:var(--cinza);border-radius:12px;padding:1.15rem;border-left:3px solid var(--dourado)}
+.dep-texto{font-size:.92rem;color:var(--texto);line-height:1.65;font-style:italic;margin-bottom:.7rem}
+.dep-info{display:flex;align-items:center;gap:.75rem}
+.dep-avatar{width:36px;height:36px;border-radius:50%;background:var(--verde);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;flex-shrink:0}
+.dep-nome{font-size:.8rem;font-weight:600;color:var(--preto)}
+.dep-caso{font-size:.73rem;color:var(--texto2)}
+
+/* ── ESCRITÓRIO ── */
+.secao-escritorio{background:var(--cinza);padding:4rem 1.5rem}
+.escritorio-card{background:#fff;border-radius:16px;padding:1.75rem;border:1px solid var(--cinza2);margin-bottom:1.5rem}
+.esc-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--cinza2)}
+.esc-avatar{width:56px;height:56px;border-radius:50%;background:var(--verde);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;flex-shrink:0}
+.esc-nome{font-size:1rem;font-weight:600;color:var(--preto)}
+.esc-oab{font-size:.75rem;color:var(--texto2);margin-top:2px}
+.esc-desc{font-size:.92rem;color:var(--texto2);line-height:1.7}
+.esc-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem;margin-top:1.5rem}
+.esc-stat{background:var(--verde-claro);border-radius:10px;padding:.9rem;text-align:center}
+.esc-stat-val{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--verde)}
+.esc-stat-label{font-size:.72rem;color:var(--texto2);margin-top:.2rem;line-height:1.35}
+
+/* ── COMO FUNCIONA ── */
+.passos{display:flex;flex-direction:column;gap:0;margin:1.75rem 0 2rem}
+.passo{display:flex;gap:1rem;align-items:flex-start;padding-bottom:1.5rem;position:relative}
+.passo:not(:last-child)::after{content:'';position:absolute;left:17px;top:36px;bottom:0;width:1px;background:var(--cinza2)}
+.passo-num{width:36px;height:36px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex-shrink:0;position:relative;z-index:1}
+.passo h3{font-size:.97rem;font-weight:600;color:var(--preto);margin-bottom:.25rem}
+.passo p{font-size:.87rem;color:var(--texto2);line-height:1.6}
+
+/* ── FAQ ── */
+.secao-faq{background:var(--cinza);padding:4rem 1.5rem}
+.faqs{display:flex;flex-direction:column;gap:.5rem;margin-top:2rem}
+.faq-item{background:#fff;border-radius:10px;border:1px solid var(--cinza2);overflow:hidden}
+.faq-pergunta{font-size:.92rem;font-weight:600;color:var(--preto);padding:1rem 1.15rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:.5rem;list-style:none}
+.faq-pergunta::after{content:'+';font-size:1.2rem;color:var(--verde);flex-shrink:0;font-weight:400}
+details[open] .faq-pergunta::after{content:'−'}
+.faq-resposta{font-size:.87rem;color:var(--texto2);line-height:1.65;padding:0 1.15rem 1rem;border-top:1px solid var(--cinza2)}
+
+/* ── CTA FINAL ── */
+.secao-cta-final{background:var(--preto);padding:5rem 1.5rem;text-align:center}
+.cta-final-inner{max-width:480px;margin:0 auto}
+.secao-cta-final h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,5.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:1rem}
+.secao-cta-final h2 em{color:var(--dourado2);font-style:italic}
+.secao-cta-final p{font-size:.97rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:2rem}
+.btn-grande{display:flex;align-items:center;justify-content:center;gap:.75rem;background:var(--verde);color:#fff;font-size:1.05rem;font-weight:600;padding:1.25rem 1.75rem;border-radius:14px;text-decoration:none;transition:all .2s;width:100%;margin-bottom:.9rem}
+.btn-grande:hover{background:var(--verde2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(27,107,58,.4)}
+.btn-grande svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+.garantia-texto{font-size:.73rem;color:rgba(255,255,255,.3);line-height:1.65}
+
+/* ── FOOTER ── */
+footer{background:#060606;padding:2rem 1.5rem;text-align:center}
+footer p{font-size:.72rem;color:rgba(255,255,255,.25);line-height:1.8}
+
+/* ── WPP SVG PATH ── */
+.wpp-path{fill:#fff}
+
+/* ── MOBILE ── */
+@media(max-width:400px){
+  .direitos-grid{grid-template-columns:1fr 1fr}
+  .numeros-grid{grid-template-columns:1fr 1fr}
+}
+
+/* ── ANIMAÇÃO ENTRADA ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-inner>*{animation:fadeUp .6s ease both}
+.hero-badge{animation-delay:.1s}
+.hero h1{animation-delay:.2s}
+.hero-desc{animation-delay:.3s}
+.hero-filtro{animation-delay:.4s}
+.btn-verde{animation-delay:.5s}
+.hero-sub-cta{animation-delay:.55s}
+</style>
+</head>
+<body>
+
+<!-- BARRA TOPO -->
+<div class="barra-topo">Atendemos todo o Brasil · <span>100% digital</span> · Sem taxa antecipada</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-nome">Dr. Marlon Aguiar</div>
+    <div class="nav-oab">Advogado Trabalhista · OAB/MG 169.624</div>
+  </div>
+  <a href="https://wa.me/5534999534721?text=Vim+da+página+de+FGTS+e+quero+buscar+todos+os+meus+direitos!" class="nav-cta">Falar agora</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Direito Trabalhista · FGTS Atrasado</div>
+    <h1>Seu patrão não deposita<br>o FGTS? Você pode sair e<br><em>receber tudo.</em></h1>
+    <p class="hero-desc">
+      FGTS em atraso por mais de 3 meses é <strong>falta grave do empregador.</strong> Você pode sair da empresa e receber aviso prévio, férias, 13º, FGTS + multa de 40% e seguro-desemprego — como numa demissão sem justa causa.
+    </p>
+    <div class="hero-filtro">
+      <strong>Este serviço é para trabalhadores com carteira assinada</strong> há mais de 1 ano, com FGTS atrasado há 3 meses ou mais.
+    </div>
+    <a href="https://wa.me/5534999534721?text=Vim+da+página+de+FGTS+e+quero+buscar+todos+os+meus+direitos!" class="btn-verde">
+      <svg viewBox="0 0 24 24"><path class="wpp-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Quero saber se tenho direito — falar agora
+    </a>
+    <p class="hero-sub-cta">Análise gratuita · Sem pagar antes · Só pagamos quando você ganhar</p>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<div class="numeros">
+  <div class="numeros-grid">
+    <div class="num-item">
+      <div class="num-val">2.578+</div>
+      <div class="num-label">Clientes atendidos</div>
+    </div>
+    <div class="num-item">
+      <div class="num-val">10+</div>
+      <div class="num-label">Anos de experiência</div>
+    </div>
+    <div class="num-item">
+      <div class="num-val">800+</div>
+      <div class="num-label">Avaliações 5 estrelas</div>
+    </div>
+    <div class="num-item">
+      <div class="num-val">14</div>
+      <div class="num-label">Especialistas trabalhistas</div>
+    </div>
+  </div>
+</div>
+
+<!-- DOR -->
+<section class="secao">
+  <div class="secao-inner">
+    <div class="s-label">Você está passando por isso?</div>
+    <h2 class="s-titulo">Situações que dão direito à rescisão indireta</h2>
+    <p class="s-subtitulo">Se você vive alguma dessas situações há mais de 3 meses, seu caso é forte. A lei está do seu lado.</p>
+    <div class="situacoes">
+      <div class="sit-item">
+        <div class="sit-icone">📋</div>
+        <p class="sit-texto"><strong>FGTS não depositado há meses.</strong> Você consulta o extrato no app da Caixa e os meses estão em branco. O patrão está te devendo o que é seu por lei.</p>
+      </div>
+      <div class="sit-item">
+        <div class="sit-icone">💰</div>
+        <p class="sit-texto"><strong>Salário atrasado com frequência.</strong> Receber com atraso todo mês compromete sua vida e é falta grave do empregador perante a CLT.</p>
+      </div>
+      <div class="sit-item">
+        <div class="sit-icone">😤</div>
+        <p class="sit-texto"><strong>Assédio moral e ambiente insuportável.</strong> Pressão abusiva, humilhações, cobranças de metas impossíveis — tudo isso também fundamenta a ação.</p>
+      </div>
+      <div class="sit-item">
+        <div class="sit-icone">⚠️</div>
+        <p class="sit-texto"><strong>Acúmulo de função sem pagamento.</strong> Fazendo tarefas além do contrato sem receber a mais configura descumprimento contratual.</p>
+      </div>
+      <div class="sit-item">
+        <div class="sit-icone">🏥</div>
+        <p class="sit-texto"><strong>Saúde afetada pelo trabalho.</strong> Estresse, ansiedade e doenças causadas pelo ambiente de trabalho também são considerados na ação.</p>
+      </div>
+    </div>
+    <a href="https://wa.me/5534999534721?text=Vim+da+página+de+FGTS+e+quero+buscar+todos+os+meus+direitos!" class="btn-verde" style="max-width:100%">
+      <svg viewBox="0 0 24 24"><path class="wpp-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Analisar meu caso gratuitamente
+    </a>
+  </div>
+</section>
+
+<!-- DIREITOS -->
+<section class="secao-escura">
+  <div class="secao-inner">
+    <div class="s-label">O que você pode receber</div>
+    <h2 class="s-titulo">Seus direitos na rescisão indireta</h2>
+    <p class="s-subtitulo">Se o seu caso for reconhecido, você recebe tudo isso — igual a uma demissão sem justa causa:</p>
+    <div class="direitos-grid">
+      <div class="dir-card">
+        <div class="dir-val">FGTS</div>
+        <div class="dir-nome">Todo o saldo acumulado + depósitos atrasados</div>
+      </div>
+      <div class="dir-card">
+        <div class="dir-val">40%</div>
+        <div class="dir-nome">Multa sobre o FGTS total</div>
+      </div>
+      <div class="dir-card">
+        <div class="dir-val">13°</div>
+        <div class="dir-nome">Décimo terceiro proporcional</div>
+      </div>
+      <div class="dir-card">
+        <div class="dir-val">Férias</div>
+        <div class="dir-nome">Férias proporcionais + 1/3</div>
+      </div>
+      <div class="dir-card">
+        <div class="dir-val">Aviso</div>
+        <div class="dir-nome">Aviso prévio indenizado</div>
+      </div>
+      <div class="dir-card">
+        <div class="dir-val">Seguro</div>
+        <div class="dir-nome">Seguro-desemprego garantido</div>
+      </div>
+    </div>
+    <div class="urgencia">
+      <div class="urg-icone">⏱️</div>
+      <p class="urg-texto"><strong>Atenção ao prazo:</strong> o direito de cobrar o FGTS prescreve em <strong>2 anos</strong> após o encerramento do contrato. Cada mês que passa pode significar menos dinheiro no seu bolso. Não espere.</p>
+    </div>
+    <a href="https://wa.me/5534999534721?text=Vim+da+página+de+FGTS+e+quero+buscar+todos+os+meus+direitos!" class="btn-verde" style="max-width:100%">
+      <svg viewBox="0 0 24 24"><path class="wpp-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Descobrir quanto posso receber
+    </a>
+    <div class="nao-qualifica">
+      <div class="nao-q-titulo">Situações que NÃO dão direito</div>
+      <ul class="nao-q-lista">
+        <li>Menos de 6 meses de empresa</li>
+        <li>FGTS atrasado por apenas 1 a 2 meses</li>
+        <li>Mais de 2 anos após o encerramento do contrato</li>
+        <li>Contrato de experiência</li>
+        <li>Atraso de salário de apenas 1 a 2 dias</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="secao">
+  <div class="secao-inner">
+    <div class="s-label">O que nossos clientes dizem</div>
+    <h2 class="s-titulo">Mais de 2.578 trabalhadores atendidos</h2>
+    <div class="estrelas">★★★★★</div>
+    <p class="av-resumo">800+ avaliações 5 estrelas no Google · 72 mil seguidores no Instagram</p>
+    <div class="depoimentos">
+      <div class="dep">
+        <p class="dep-texto">"Trabalhei 5 anos com FGTS nunca depositado. O escritório do Dr. Marlon recuperou tudo mais a multa. Não acreditava que fosse possível, mas deu certo e foi muito rápido."</p>
+        <div class="dep-info">
+          <div class="dep-avatar">GO</div>
+          <div>
+            <div class="dep-nome">Gilvan O. · Porto Seguro/BA</div>
+            <div class="dep-caso">FGTS em atraso + rescisão indireta</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep">
+        <p class="dep-texto">"Quase 2 anos sem um centavo de FGTS e com salário atrasado. O Dr. Thiado me explicou tudo com clareza, fez o processo e conseguiu resolver muito rápido."</p>
+        <div class="dep-info">
+          <div class="dep-avatar">DS</div>
+          <div>
+            <div class="dep-nome">Douglas S. · Atendimento online</div>
+            <div class="dep-caso">FGTS não depositado + atraso salarial</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep">
+        <p class="dep-texto">"Saí da empresa sem perder nenhum direito. Recebi FGTS, multa de 40%, férias e seguro-desemprego. O atendimento foi humanizado do começo ao fim. Super recomendo!"</p>
+        <div class="dep-info">
+          <div class="dep-avatar">KS</div>
+          <div>
+            <div class="dep-nome">Ketlyn S. · São José dos Pinhais/PR</div>
+            <div class="dep-caso">Rescisão indireta + FGTS + assédio moral</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESCRITÓRIO -->
+<section class="secao-escritorio">
+  <div class="secao-inner">
+    <div class="s-label">Sobre o escritório</div>
+    <h2 class="s-titulo">10 anos defendendo o trabalhador brasileiro</h2>
+    <div class="escritorio-card">
+      <div class="esc-header">
+        <div class="esc-avatar">MA</div>
+        <div>
+          <div class="esc-nome">Dr. Marlon Aguiar</div>
+          <div class="esc-oab">OAB/MG 169.624 · Advogado Trabalhista</div>
+        </div>
+      </div>
+      <p class="esc-desc">O escritório Dr. Marlon Aguiar Advogados atua exclusivamente na defesa dos direitos dos trabalhadores, nunca dos empregadores. Com uma equipe de 14 especialistas em direito trabalhista e atendimento 100% digital, ajudamos trabalhadores de todo o Brasil a recuperar o que é seu por lei — sem sair de casa.</p>
+      <div class="esc-stats">
+        <div class="esc-stat">
+          <div class="esc-stat-val">2.578+</div>
+          <div class="esc-stat-label">Clientes atendidos</div>
+        </div>
+        <div class="esc-stat">
+          <div class="esc-stat-val">10+</div>
+          <div class="esc-stat-label">Anos de experiência</div>
+        </div>
+        <div class="esc-stat">
+          <div class="esc-stat-val">14</div>
+          <div class="esc-stat-label">Advogados especialistas</div>
+        </div>
+        <div class="esc-stat">
+          <div class="esc-stat-val">72k</div>
+          <div class="esc-stat-label">Seguidores Instagram</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="secao">
+  <div class="secao-inner">
+    <div class="s-label">Como funciona</div>
+    <h2 class="s-titulo">Simples, rápido e sem sair de casa</h2>
+    <div class="passos">
+      <div class="passo">
+        <div class="passo-num">1</div>
+        <div>
+          <h3>Fale com nosso especialista pelo WhatsApp</h3>
+          <p>Em minutos o Dr. Thiado analisa sua situação e te diz se o caso tem chance. É gratuito e sem compromisso.</p>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">2</div>
+        <div>
+          <h3>Assine os documentos pelo celular</h3>
+          <p>Tudo online. Sem precisar ir ao escritório nem perder dia de trabalho.</p>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">3</div>
+        <div>
+          <h3>Entramos com a ação — você aguarda</h3>
+          <p>Os processos trabalhistas são os mais rápidos do Brasil. Em 30 a 45 dias já temos audiência marcada.</p>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">4</div>
+        <div>
+          <h3>Você recebe. Só então nos pagamos.</h3>
+          <p>Sem taxa antecipada. Nossos honorários saem do valor que você ganhar na ação. Zero risco para você.</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://wa.me/5534999534721?text=Vim+da+página+de+FGTS+e+quero+buscar+todos+os+meus+direitos!" class="btn-verde" style="max-width:100%">
+      <svg viewBox="0 0 24 24"><path class="wpp-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Começar minha análise gratuita
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="secao-faq">
+  <div class="secao-inner">
+    <div class="s-label">Dúvidas frequentes</div>
+    <h2 class="s-titulo">Perguntas que nossos clientes fazem</h2>
+    <div class="faqs">
+      <details class="faq-item">
+        <summary class="faq-pergunta">Posso entrar com a ação sem sair do emprego?</summary>
+        <p class="faq-resposta">Sim. O parágrafo 3° do Art. 483 da CLT permite que você continue trabalhando enquanto o processo corre. O juiz decide se você deve ou não continuar na empresa durante o processo.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-pergunta">Quanto tempo leva o processo?</summary>
+        <p class="faq-resposta">Os processos trabalhistas são os mais rápidos do Brasil. Em 30 a 45 dias já temos audiência marcada. O resultado final varia por região, mas costuma ser rápido.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-pergunta">Preciso de provas do FGTS atrasado?</summary>
+        <p class="faq-resposta">Sim, mas é simples. O extrato do app FGTS da Caixa já é prova suficiente. Você consulta, faz um print ou screenshot mostrando os meses sem depósito, e isso já é suficiente para o processo.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-pergunta">Tenho que pagar alguma coisa para começar?</summary>
+        <p class="faq-resposta">Não. A análise do caso é gratuita. Os honorários do escritório são cobrados apenas sobre o valor que você receber na ação. Se não ganhar, não paga.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-pergunta">Quantos meses de FGTS atrasado preciso ter?</summary>
+        <p class="faq-resposta">A lei não determina um número mínimo, mas na prática, 3 meses ou mais de atraso já caracteriza falta grave e dá sustentação sólida para a ação de rescisão indireta.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-pergunta">Posso cobrar outros direitos junto com o FGTS?</summary>
+        <p class="faq-resposta">Sim. No mesmo processo você pode pedir horas extras não pagas, adicional de insalubridade, desvio de função, assédio moral e outros direitos violados. Tudo junto numa única ação.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="secao-cta-final">
+  <div class="cta-final-inner">
+    <h2>Não perca o que é<br><em>seu por direito.</em></h2>
+    <p>Em poucos minutos pelo WhatsApp, nosso especialista já analisa seu caso e te diz exatamente quanto você pode recuperar. Gratuito, rápido e sem compromisso.</p>
+    <a href="https://wa.me/5534999534721?text=Vim+da+página+de+FGTS+e+quero+buscar+todos+os+meus+direitos!" class="btn-grande">
+      <svg viewBox="0 0 24 24"><path class="wpp-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Falar agora com o especialista
+    </a>
+    <p class="garantia-texto">Análise 100% gratuita · Sem taxa antecipada · Só pagamos quando você ganhar<br>Atendemos todo o Brasil · 100% digital · OAB/MG 169.624</p>
+  </div>
+</section>
+
+<footer>
+  <p>
+    Dr. Marlon Aguiar Advogados · OAB/MG 169.624<br>
+    Advogado Trabalhista · Atendimento 100% digital em todo o Brasil<br>
+    Este site não garante resultados. Cada caso é analisado individualmente conforme as provas disponíveis.
+  </p>
+</footer>
+
+</body>
+</html>
